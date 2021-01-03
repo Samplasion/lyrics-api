@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>lyrics-api</title>
-	<meta name="description" content="Documentation for lyrics-api">
+	<title>modulyrics</title>
+	<meta name="description" content="Documentation for modulyrics">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">lyrics-api</a>
+					<a href="index.html" class="title">modulyrics</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>Project lyrics-api</h1>
+			<h1>Project modulyrics</h1>
 		</div>
 	</div>
 </header>
@@ -58,15 +58,15 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#lyrics-api" id="lyrics-api" style="color: inherit; text-decoration: none;">
-					<h1>lyrics-api</h1>
+				<a href="#modulyrics" id="modulyrics" style="color: inherit; text-decoration: none;">
+					<h1>modulyrics</h1>
 				</a>
 				<p><strong><a href="https://ly.samplasion.js.org">Documentation</a></strong></p>
 				<p>A modular, extensible, provider-based lyrics searching/scraping service.</p>
-				<p><code>lyrics-api</code> is based on providers. There are two available out of the box, <code>GeniusProvider</code>
+				<p><code>modulyrics</code> is based on providers. There are two available out of the box, <code>GeniusProvider</code>
 				and <code>AZLyricsProvider</code>.</p>
 				<p>To add a provider to the API, call <code>addProvider</code> or <code>addProviders</code> on the API instance:</p>
-				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">API</span><span style="color: #000000">, </span><span style="color: #001080">GeniusProvider</span><span style="color: #000000">, </span><span style="color: #001080">AZLyricsProvider</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;lyrics-api&quot;</span><span style="color: #000000">;</span>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">API</span><span style="color: #000000">, </span><span style="color: #001080">GeniusProvider</span><span style="color: #000000">, </span><span style="color: #001080">AZLyricsProvider</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;modulyrics&quot;</span><span style="color: #000000">;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">api</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">API</span><span style="color: #000000">()</span>
 <span style="color: #000000">    .</span><span style="color: #795E26">useProviders</span><span style="color: #000000">([</span>
@@ -81,7 +81,7 @@
 				<p>You can also create your own providers: suppose you have a website, <em>mylyricswebsite.com</em>.
 				You can create a provider that scrapes that website:</p>
 				<pre><code class="language-ts"><span style="color: #008000">// Other imports...</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">BaseProvider</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;lyrics-api&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">BaseProvider</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;modulyrics&quot;</span><span style="color: #000000">;</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> </span><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">MyLyricsProvider</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">BaseProvider</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #0000FF">async</span><span style="color: #000000"> </span><span style="color: #795E26">search</span><span style="color: #000000">(</span><span style="color: #001080">query</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">) {</span>

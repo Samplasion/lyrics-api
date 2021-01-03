@@ -10,7 +10,7 @@ import { PartialSong } from './types';
  *
  * @example
  * ```js
- * import { API, GeniusProvider, AZLyricsProvider } from 'lyrics-api';
+ * import { API, GeniusProvider, AZLyricsProvider } from 'modulyrics';
  *
  * const api = new API()
  *     .useProviders([

@@ -1,16 +1,16 @@
-# lyrics-api
+# modulyrics
 
 **[Documentation](https://ly.samplasion.js.org)**
 
 A modular, extensible, provider-based lyrics searching/scraping service.
 
-`lyrics-api` is based on providers. There are two available out of the box, `GeniusProvider`
+`modulyrics` is based on providers. There are two available out of the box, `GeniusProvider`
 and `AZLyricsProvider`.
 
 To add a provider to the API, call `addProvider` or `addProviders` on the API instance:
 
 ```ts
-import { API, GeniusProvider, AZLyricsProvider } from "lyrics-api";
+import { API, GeniusProvider, AZLyricsProvider } from "modulyrics";
 
 const api = new API()
     .useProviders([
@@ -28,7 +28,7 @@ You can create a provider that scrapes that website:
 
 ```ts
 // Other imports...
-import { BaseProvider } from "lyrics-api";
+import { BaseProvider } from "modulyrics";
 
 export default class MyLyricsProvider extends BaseProvider {
     public async search(query: string) {
