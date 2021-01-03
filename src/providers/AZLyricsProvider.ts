@@ -36,6 +36,7 @@ export default class AZLyricsProvider extends Provider {
                         .match(/"(.*)"/)?.[1] ?? '',
                 artist: row.find('td > b').text(),
                 url: row.find('a').attr('href')!,
+                provider: 'AZLyrics',
             };
         });
     }
@@ -65,6 +66,7 @@ export default class AZLyricsProvider extends Provider {
                     .match(/"(.*)"/)?.[1]
                     .trim() ?? '',
             url: song.url,
+            provider: 'AZLyrics',
         };
     }
 }

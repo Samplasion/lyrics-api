@@ -1,5 +1,5 @@
 import Provider from './Provider';
-import { PartialSong } from './types';
+import { PartialSong, Song } from './types';
 
 /**
  * The main API.
@@ -83,7 +83,7 @@ export default class API {
      * @returns
      * @memberof API
      */
-    public async getSongs(query: string) {
+    public async getSongs(query: string): Promise<Song[]> {
         let songs: PartialSong[] | null = null;
         let index = -1;
         do {
@@ -92,8 +92,9 @@ export default class API {
             } catch {}
         } while (!songs?.length && index < this.providers.length);
         if (!songs?.length) return [];
-        return Promise.all(
+        const results = await Promise.all(
             songs.map(song => this.providers[index].lyrics(song))
         );
+        return results.filter(song => !!song.lyrics);
     }
 }

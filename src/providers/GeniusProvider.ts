@@ -55,7 +55,7 @@ export default class GeniusProvider extends Provider {
         }
     }
 
-    private async apiSearch(query: string): Promise<PartialSong[]> {
+    private async apiSearch(query: string) {
         const body = await phin({
             url: `https://api.genius.com/search?q=${encodeURIComponent(query)}`,
             parse: 'json',
@@ -68,10 +68,11 @@ export default class GeniusProvider extends Provider {
             artist: obj.result.primary_artist.name,
             title: obj.result.title,
             url: obj.result.url,
+            provider: 'Genius',
         }));
     }
 
-    private async peasantSearch(query: string): Promise<PartialSong[]> {
+    private async peasantSearch(query: string) {
         const body = await phin({
             url: `${host}/search/quick?&q=${encodeURIComponent(query)}`,
             headers: searchHeaders,
@@ -90,9 +91,10 @@ export default class GeniusProvider extends Provider {
                 artist,
                 title,
                 url: host + url,
+                provider: 'Genius',
             };
         });
-        return songs;
+        return songs.filter(({ artist }) => artist !== 'Spotify');
     }
 
     async lyrics(song: PartialSong, firstTime = true): Promise<Song> {
@@ -120,6 +122,7 @@ export default class GeniusProvider extends Provider {
                       thumbnail: (null as unknown) as string,
                       title: (null as unknown) as string,
                       url: (null as unknown) as string,
+                      provider: 'Genius',
                   };
         }
 
@@ -132,6 +135,7 @@ export default class GeniusProvider extends Provider {
                 .text()
                 .trim(),
             url: song.url,
+            provider: 'Genius',
         };
     }
 }

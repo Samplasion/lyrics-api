@@ -17,7 +17,7 @@ export default class Provider {
      *
      * @memberof Provider
      */
-    async search(_query: string): Promise<PartialSong[]> {
+    async search(_query: string): Promise<PartialSong[] | null> {
         throw new Error('Unimplemented.');
     }
 

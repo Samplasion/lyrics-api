@@ -11,6 +11,7 @@ export interface PartialSong {
     artist: string;
     title: string;
     url: string;
+    provider: string;
 }
 
 /**
