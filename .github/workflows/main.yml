@@ -28,8 +28,14 @@ jobs:
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2 --passWithNoTests
 
-      - name: Build
-        run: yarn build
-
       - name: Build documentation
         run: yarn doc
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Build
+        run: yarn build
