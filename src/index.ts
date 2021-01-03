@@ -1,11 +1,13 @@
-import API from "./API";
-import AZLyricsProvider from "./providers/AZLyricsProvider";
-import GeniusProvider from "./providers/GeniusProvider";
-import BaseProvider from "./Provider";
-import { PartialSong, Song } from "./types";
+import API from './API';
+import AZLyricsProvider from './providers/AZLyricsProvider';
+import GeniusProvider from './providers/GeniusProvider';
+import BaseProvider from './Provider';
+import { PartialSong, Song } from './types';
 
-const api = new API()
-    .useProviders([ new GeniusProvider(), new AZLyricsProvider() ]);
+const api = new API().useProviders([
+    new GeniusProvider(),
+    new AZLyricsProvider(),
+]);
 
 export {
     API,
@@ -14,5 +16,5 @@ export {
     AZLyricsProvider,
     BaseProvider,
     PartialSong,
-    Song
+    Song,
 };

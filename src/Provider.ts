@@ -1,9 +1,9 @@
-import { PartialSong, Song } from "./types";
+import { PartialSong, Song } from './types';
 
 /**
  * The base Provider class. Extend this class
  * to create new Providers.
- * 
+ *
  * A provider is a class that returns Song objects
  * by fetching a website.
  *
@@ -18,7 +18,7 @@ export default class Provider {
      * @memberof Provider
      */
     async search(_query: string): Promise<PartialSong[]> {
-        throw new Error("Unimplemented.");
+        throw new Error('Unimplemented.');
     }
 
     /**
@@ -28,6 +28,6 @@ export default class Provider {
      * @memberof Provider
      */
     async lyrics(_song: PartialSong): Promise<Song> {
-        throw new Error("Unimplemented.");
+        throw new Error('Unimplemented.');
     }
 }

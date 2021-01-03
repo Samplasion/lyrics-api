@@ -30,7 +30,8 @@
     "printWidth": 80,
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "tabWidth": 4
   },
   "name": "lyrics-api",
   "author": "Samplasion <samplasion@gmail.com>",
@@ -57,6 +58,10 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
     "phin": "^3.5.1"
+  },
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1"
   },
   "description": "A modular, extensible, provider-based lyrics searching/scraping service."
 }

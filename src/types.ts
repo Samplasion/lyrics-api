@@ -1,6 +1,6 @@
 /**
  * Represent a song without its lyrics.
- * 
+ *
  * This interface won't be particularly useful
  * if you just want the lyrics, but if you're adding
  * a new provider, this is what you'll need to return
@@ -15,7 +15,7 @@ export interface PartialSong {
 
 /**
  * Represents a song.
- * 
+ *
  * Represents a song complete of lyrics and (if applicable) a thumbnail.
  */
 export interface Song extends PartialSong {
