@@ -3,4 +3,4 @@
 node_modules
 dist
 coverage
-test/config.ts
+test/config.actual.ts

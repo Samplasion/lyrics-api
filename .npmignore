@@ -2,4 +2,4 @@ docs
 .github
 *.lock
 coverage
-test/config.ts
+test/config.actual.ts
