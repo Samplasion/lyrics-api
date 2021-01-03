@@ -1,5 +1,5 @@
 import { API, GeniusProvider } from '../src/index';
-import { GENIUS } from './config.actual';
+import { GENIUS } from './config';
 
 const api = new API().useProvider(new GeniusProvider());
 const query = 'where are you now britney spear';
