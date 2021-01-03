@@ -1,5 +1,7 @@
 # lyrics-api
 
+**[Documentation](https://ly.samplasion.js.org)**
+
 A modular, extensible, provider-based lyrics searching/scraping service.
 
 `lyrics-api` is based on providers. There are two available out of the box, `GeniusProvider`
